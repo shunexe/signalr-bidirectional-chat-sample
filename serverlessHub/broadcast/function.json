@@ -1,0 +1,24 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "type": "signalRTrigger",
+      "name": "invocation",
+      "hubName": "chathub",
+      "category": "messages",
+      "event": "SendMessage",
+      "parameterNames": [
+        "message"
+      ],
+      "direction": "in"
+    },
+    {
+      "type": "signalR",
+      "name": "signalRMessages",
+      "hubName": "chathub",
+      "connectionStringSetting": "AzureSignalRConnectionString",
+      "direction": "out"
+    }
+  ],
+  "scriptFile": "../dist/broadcast/index.js"
+}
